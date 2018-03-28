@@ -190,6 +190,8 @@ if ( $("#cbType7").is(':checked')) searchType += "7,";
 if ( $("#cbType8").is(':checked')) searchType += "8,";
 if ( $("#cbType9").is(':checked')) searchType += "9,";
 if ( $("#cbType10").is(':checked')) searchType += "10,";
+if ( $("#cbType11").is(':checked')) searchType += "11,";
+if ( $("#cbType12").is(':checked')) searchType += "12,";
 self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
 
         //-----end of custom filters-----
