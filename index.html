@@ -23,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class='navbar-brand' href='index.html'>Searchable Map Template</a>
+          <a class='navbar-brand' href='index.html'>Grand Adventure USA Searchable Map</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -36,7 +36,7 @@
     <div class='container-fluid'>
       <div class='row'>
         <div class='col-md-4'>
-          <p>This is a demo of <a href='http://derekeder.com'>Derek Eder's</a> <a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a> using Google <a href='http://support.google.com/fusiontables/answer/2571232?hl=en&ref_topic=1652595'>Fusion Tables</a>. Use this section to give a little context to your map.</p>
+          <p>Grand Adventure USA searchable map is a wonderful tool for you to use when designing your very own itinerary.</p>
           <div class='well'>
             <h4>
               Address <small>(<a id='find_me' href='#'>find me</a>)</small>
@@ -48,34 +48,104 @@
               <label>
                 within
                 <select id='search_radius'>
-                  <option value='400'>2 blocks</option>
-                  <option value='805'>1/2 mile</option>
+                  <option value='805'>1/2 miles</option>
                   <option value='1610'>1 mile</option>
                   <option value='3220'>2 miles</option>
+                  <option value='8050'>5 miles</option>
+                  <option value='16100'>10 miless</option>
+                  <option value='32200'>20 mile</option>
+                  <option value='80500'>50 miles</option>
+                  <option value='161000'>100 miles</option>
                 </select>
               </label>
             </p>
+<ul class='inputs-list unstyled'>
+  <li>
+    <label class='checkbox inline'>
+      <input type='checkbox' id='cbType1' />
+      
+      National Parks
+    </label>
+  </li>
+  <li>
+    <label class='checkbox inline'>
+      <input type='checkbox' id='cbType2' />
+      
+      National Monuments
+    </label>
+  </li>
+  <li>
+    <label class='checkbox inline'>
+      <input type='checkbox' id='cbType3' />
+      
+      National Historic Parks/Sites and National Memorials
+    </label>
+  </li>
+   <li>
+    <label class='checkbox inline'>
+      <input type='checkbox' id='cbType4' />
+      
+      National Conservation Areas and Other Similar Designations
+    </label>
+  </li>
+   <li>
+    <label class='checkbox inline'>
+      <input type='checkbox' id='cbType5' />
+      
+      National Recreation Areas
+    </label>
+  </li>
+   <li>
+    <label class='checkbox inline'>
+      <input type='checkbox' id='cbType6' />
+      
+      State Parks
+    </label>
+  </li>
+   <li>
+    <label class='checkbox inline'>
+      <input type='checkbox' id='cbType7' />
+      
+      State Historic Parks
+    </label>
+  </li>
+   <li>
+    <label class='checkbox inline'>
+      <input type='checkbox' id='cbType9' />
+      
+      Campgrounds
+    </label>
+  </li>
+   <li>
+    <label class='checkbox inline'>
+      <input type='checkbox' id='cbType10' />
+      
+      Free Campgrounds
+    </label>
+  </li>
+   <li>
+    <label class='checkbox inline'>
+      <input type='checkbox' id='cbType8' />
+      
+      Points of Interest
+    </label>
+  </li>
+  <li>
+    <label class='checkbox inline'>
+      <input type='checkbox' id='cbType11' />
+      
+      Trails
+    </label>
+  </li>
+  <li>
+    <label class='checkbox inline'>
+      <input type='checkbox' id='cbType12' />
+      
+      Viewpoints
+    </label>
+  </li>
+</ul>
 
-            <br />
-            <h4>Custom filters and views</h4>
-            <p>Take a look at the <a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples'>wiki</a> to see how to add your own custom filters and views like:</p>
-            <div class='row'>
-              <div class='col-md-6'>
-                <ul>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-checkboxes'>Checkboxes</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-radiobuttons'>Radio buttons</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-drop-down-lists'>Drop down lists</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-textsearches'>Text searches</a></li>
-                </ul>
-              </div>
-              <div class='col-md-6'>
-                <ul>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-sliders'>Sliders</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-date-sliders'>Date sliders</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/List-search-results'>Results lists</a></li>
-                </ul>
-              </div>
-            </div>
             <br />
             <a class='btn btn-primary' id='search' href='#'>
               <i class='glyphicon glyphicon-search'></i>
@@ -106,7 +176,7 @@
     <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="js/jquery.address.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyAR5eeFETe-sMigouZtPABzHpyA02MGyjQ"></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyBr6diuIfKjzubBUVZ6dOnYgCNkz9jfWk4"></script>
     <script type="text/javascript" src="js/maps_lib.js"></script>
     <script type='text/javascript'>
       //<![CDATA[
@@ -119,11 +189,11 @@
         
         $(function() {
           var myMap = new MapsLib({
-            fusionTableId:      "1m4Ez9xyTGfY2CU6O-UgEcPzlS0rnzLU93e4Faa0",
-            googleApiKey:       "AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY",
-            locationColumn:     "geometry",
-            map_center:         [41.8781136, -87.66677856445312],
-            locationScope:      "chicago"
+            fusionTableId:      "17BELP3Y9VuwXDLvTi-eV9fRAytj1E5ZV4Cs8tglN",
+            googleApiKey:       "AIzaSyCxj2xMiEkgtFWztDIbqipu0UOUaDWHdTs",
+            locationColumn:     "latitude",
+            map_center:         [37.297326, -113.024433],
+            locationScope:      "usa"
           });
 
           var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));

@@ -24,7 +24,7 @@
         this.locationScope = options.locationScope || "";
 
         // zoom level when map is loaded (bigger is more zoomed in)
-        this.defaultZoom = options.defaultZoom || 11; 
+        this.defaultZoom = options.defaultZoom || 6; 
 
         // center that your map defaults to
         this.map_centroid = new google.maps.LatLng(options.map_center[0], options.map_center[1]);
@@ -82,7 +82,7 @@
         else 
             $("#search_radius").val(self.searchRadius);
         
-        $(":checkbox").prop("checked", "checked");
+        $(":checkbox").prop("checked", "");
         $("#result_box").hide();
 
         //-----custom initializers-----
@@ -178,6 +178,22 @@
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
+                var type_column = "'type'";
+var searchType = type_column + " IN (-1,";
+if ( $("#cbType1").is(':checked')) searchType += "1,";
+if ( $("#cbType2").is(':checked')) searchType += "2,";
+if ( $("#cbType3").is(':checked')) searchType += "3,";
+if ( $("#cbType4").is(':checked')) searchType += "4,";
+if ( $("#cbType5").is(':checked')) searchType += "5,";
+if ( $("#cbType6").is(':checked')) searchType += "6,";
+if ( $("#cbType7").is(':checked')) searchType += "7,";
+if ( $("#cbType8").is(':checked')) searchType += "8,";
+if ( $("#cbType9").is(':checked')) searchType += "9,";
+if ( $("#cbType10").is(':checked')) searchType += "10,";
+if ( $("#cbType11").is(':checked')) searchType += "11,";
+if ( $("#cbType12").is(':checked')) searchType += "12,";
+self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
+
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
